@@ -11,14 +11,14 @@ pipeline{
         stage('build docker image')
         {
             steps{
-                sh 'docker build -t java-maven .'
+                sh 'sudo docker build -t java-maven .'
             }
         }
 
         stage('run docker container')
         {
             steps{
-                sh 'docker run --name java-mavenC java-maven'
+                sh 'sudo docker run --name java-mavenC java-maven'
             }
         }
 
